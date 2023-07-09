@@ -9,9 +9,25 @@
 import SwiftUI
 
 struct NavigationLinkPractice: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack(spacing: 20) {
+                NavigationLink(destination: Text("First Destination View")) {
+                    Text("Go to first destination view")
+                }
+
+                NavigationLink(destination: Text("Second Destination View")) {
+                    Text("Go to second destination view")
+                }
+
+                NavigationLink(destination: Text("Third Destination View")) {
+                    Text("Go to third destination view")
+                }
+            }
+        }
     }
+    
 }
 
 struct NavigationLinkPractice_Previews: PreviewProvider {
