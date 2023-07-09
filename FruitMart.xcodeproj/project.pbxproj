@@ -17,6 +17,7 @@
 		CE1694172A595DBC0010CA6D /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1694162A595DBC0010CA6D /* ProductRow.swift */; };
 		CE16941A2A595FDF0010CA6D /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1694192A595FDF0010CA6D /* Color+Extension.swift */; };
 		CE16941F2A5963DA0010CA6D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE16941E2A5963DA0010CA6D /* Product.swift */; };
+		CE1694222A5A8BDA0010CA6D /* ButtonPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1694212A5A8BDA0010CA6D /* ButtonPractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CE1694162A595DBC0010CA6D /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		CE1694192A595FDF0010CA6D /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		CE16941E2A5963DA0010CA6D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		CE1694212A5A8BDA0010CA6D /* ButtonPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPractice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		5238EAE1240BAD5D0079E99D /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				CE1694202A5A8BCB0010CA6D /* Practice */,
 				5238EAE5240BAE840079E99D /* Home */,
 			);
 			path = "User Interface";
@@ -149,6 +152,14 @@
 				CE16941E2A5963DA0010CA6D /* Product.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CE1694202A5A8BCB0010CA6D /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				CE1694212A5A8BDA0010CA6D /* ButtonPractice.swift */,
+			);
+			path = Practice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +238,7 @@
 				CE16941A2A595FDF0010CA6D /* Color+Extension.swift in Sources */,
 				5238EACC240BAC920079E99D /* AppDelegate.swift in Sources */,
 				5238EACE240BAC920079E99D /* SceneDelegate.swift in Sources */,
+				CE1694222A5A8BDA0010CA6D /* ButtonPractice.swift in Sources */,
 				5238EAD0240BAC920079E99D /* Home.swift in Sources */,
 				CE16941F2A5963DA0010CA6D /* Product.swift in Sources */,
 			);
