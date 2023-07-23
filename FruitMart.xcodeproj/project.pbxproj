@@ -19,6 +19,7 @@
 		CE16941F2A5963DA0010CA6D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE16941E2A5963DA0010CA6D /* Product.swift */; };
 		CE1694222A5A8BDA0010CA6D /* ButtonPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1694212A5A8BDA0010CA6D /* ButtonPractice.swift */; };
 		CE1694242A5A8C440010CA6D /* NavigationPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1694232A5A8C440010CA6D /* NavigationPractice.swift */; };
+		CE8266C32A6CE1DD00EEE095 /* ListPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8266C22A6CE1DD00EEE095 /* ListPractice.swift */; };
 		CEEC9D4E2A5AA1C100BDC266 /* NavigationLinkPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC9D4D2A5AA1C000BDC266 /* NavigationLinkPractice.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		CE16941E2A5963DA0010CA6D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		CE1694212A5A8BDA0010CA6D /* ButtonPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPractice.swift; sourceTree = "<group>"; };
 		CE1694232A5A8C440010CA6D /* NavigationPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPractice.swift; sourceTree = "<group>"; };
+		CE8266C22A6CE1DD00EEE095 /* ListPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPractice.swift; sourceTree = "<group>"; };
 		CEEC9D4D2A5AA1C000BDC266 /* NavigationLinkPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkPractice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +166,7 @@
 				CE1694212A5A8BDA0010CA6D /* ButtonPractice.swift */,
 				CE1694232A5A8C440010CA6D /* NavigationPractice.swift */,
 				CEEC9D4D2A5AA1C000BDC266 /* NavigationLinkPractice.swift */,
+				CE8266C22A6CE1DD00EEE095 /* ListPractice.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			files = (
 				CE1694172A595DBC0010CA6D /* ProductRow.swift in Sources */,
 				CE16941A2A595FDF0010CA6D /* Color+Extension.swift in Sources */,
+				CE8266C32A6CE1DD00EEE095 /* ListPractice.swift in Sources */,
 				5238EACC240BAC920079E99D /* AppDelegate.swift in Sources */,
 				5238EACE240BAC920079E99D /* SceneDelegate.swift in Sources */,
 				CE1694222A5A8BDA0010CA6D /* ButtonPractice.swift in Sources */,
