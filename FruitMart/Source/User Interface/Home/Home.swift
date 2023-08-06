@@ -18,7 +18,7 @@ struct Home: View {
         NavigationView {
             List {
                 ForEach(self.store.products) { product in
-                    NavigationLink(destination: Text("상세 정보 페이지")) {
+                    NavigationLink(destination: ProductDetailView(product: product)) {
                         ProductRow(product: product)
                     }
                 }
