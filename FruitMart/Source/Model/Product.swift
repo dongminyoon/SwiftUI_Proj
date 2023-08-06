@@ -8,18 +8,45 @@
 
 import Foundation
 
-struct Product {
+struct Product: Decodable, Identifiable {
+    let id: UUID
     let name: String
     let imageName: String
     let price: Int
     let description: String
     let isFavorite: Bool
+    
+    enum CodingKeys: CodingKey {
+        case name
+        case imageName
+        case price
+        case description
+        case isFavorite
+    }
+    
+    init(from decoder: Decoder) throws {
+        self.id = UUID()
+        
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.imageName = try container.decode(String.self, forKey: .imageName)
+        self.price = try container.decode(Int.self, forKey: .price)
+        self.description = try container.decode(String.self, forKey: .description)
+        self.isFavorite = try container.decode(Bool.self, forKey: .isFavorite)
+    }
+    
+    init(
+        name: String,
+        imageName: String,
+        price: Int,
+        description: String,
+        isFavorite: Bool
+    ) {
+        self.id = UUID()
+        self.name = name
+        self.imageName = imageName
+        self.price = price
+        self.description = description
+        self.isFavorite = isFavorite
+    }
 }
-
-let productSamples: [Product] = [
-    Product(name: "나는야 무화과", imageName: "fig", price: 3100, description: "소화가 잘되고 변비에", isFavorite: false),
-    Product(name: "유기농 아보카도", imageName: "avocado", price: 2000, description: "미네랄도 풍부하고, 요리 장식", isFavorite: false),
-    Product(name: "바나나 안 바나나", imageName: "banana", price: 2400, description: "달콤한 맛의 바나나. 이렇게 맛있으니", isFavorite: false),
-    Product(name: "아임 파인애플", imageName: "pineapple", price: 3000, description: "소화와 피로회복, 비타민까지!", isFavorite: false),
-    Product(name: "시원한 수박", imageName: "watermelon", price: 3500, description: "아이들이 너무나 좋아하는 시원하고", isFavorite: true)
-]

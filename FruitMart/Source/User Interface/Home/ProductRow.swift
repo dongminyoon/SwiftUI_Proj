@@ -82,6 +82,14 @@ extension ProductRow {
 
 struct ProductRow_Previews: PreviewProvider {
     static var previews: some View {
-        ProductRow(product: productSamples[0])
+        ProductRow(
+            product: Product(
+                name: "awdawd",
+                imageName: "banana",
+                price: 1000,
+                description: "안녕하세요",
+                isFavorite: true
+            )
+        )
     }
 }

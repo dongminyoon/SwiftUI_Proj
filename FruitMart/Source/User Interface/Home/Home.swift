@@ -10,13 +10,25 @@ import SwiftUI
 
 struct Home: View {
     
+    init(store: Store = Store()) {
+        self.store = store
+    }
+    
     var body: some View {
-        VStack {
-            ProductRow(product: productSamples[0])
-            ProductRow(product: productSamples[1])
-            ProductRow(product: productSamples[2])
+        NavigationView {
+            List {
+                ForEach(self.store.products) { product in
+                    NavigationLink(destination: Text("상세 정보 페이지")) {
+                        ProductRow(product: product)
+                    }
+                }
+            }
+            .listStyle(.grouped)
+            .navigationBarTitle("과일마트")
         }
     }
+    
+    private let store: Store
     
 }
 
