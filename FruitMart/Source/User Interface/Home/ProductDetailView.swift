@@ -109,15 +109,16 @@ struct ProductDetailView: View {
 }
 
 struct ProductDetailView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        ProductDetailView(
-            product: Product(
-                name: "바나나",
-                imageName: "banana",
-                price: 2500,
-                description: "싱싱하고 산뜻한 바나나 먹어보세요!! 🍌",
-                isFavorite: true
-            )
-        )
+        let store = Store()
+        let previewOne = ProductDetailView(product: store.products[0])
+        let previewTwo = ProductDetailView(product: store.products[1])
+        
+        Group {
+            Preview(source: previewOne)
+            Preview(source: previewTwo, device: [.iPhone14Pro], displayDarkMode: false)
+        }
     }
+    
 }

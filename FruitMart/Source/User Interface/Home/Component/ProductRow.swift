@@ -81,15 +81,15 @@ extension ProductRow {
 }
 
 struct ProductRow_Previews: PreviewProvider {
+    
     static var previews: some View {
-        ProductRow(
-            product: Product(
-                name: "awdawd",
-                imageName: "banana",
-                price: 1000,
-                description: "안녕하세요",
-                isFavorite: true
-            )
-        )
+        Group {
+            ForEach(Store().products) {
+                ProductRow(product: $0)
+            }
+        }
+        .padding()
+        .previewLayout(.sizeThatFits)
     }
+    
 }

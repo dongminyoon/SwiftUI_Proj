@@ -17,10 +17,6 @@ struct Preview<V: View>: View {
         case iPhone14ProMax = "iPhone 14 Pro Max"
     }
     
-    let source: V
-    var devices: [Device] = [.iPhone14Pro, .iPhone14ProMax, .iPhoneSE]
-    var displayDarkMode: Bool = true
-    
     var body: some View {
         Group {
             ForEach(self.devices, id: \.self) {
@@ -34,11 +30,25 @@ struct Preview<V: View>: View {
         }
     }
     
+    init(
+        source: V,
+        device: [Device] = Device.allCases,
+        displayDarkMode: Bool = true
+    ) {
+        self.source = source
+        self.devices = device
+        self.displayDarkMode = displayDarkMode
+    }
+    
     private func previewSource(device: Device) -> some View {
         self.source
             .previewDevice(PreviewDevice(rawValue: device.rawValue))
             .previewDisplayName(device.rawValue)
     }
+    
+    private let source: V
+    private let devices: [Device]
+    private let displayDarkMode: Bool
     
 }
 
