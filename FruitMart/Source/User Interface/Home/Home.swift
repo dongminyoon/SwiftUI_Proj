@@ -9,11 +9,7 @@
 import SwiftUI
 
 struct Home: View {
-    
-    init(store: Store = Store()) {
-        self.store = store
-    }
-    
+        
     var body: some View {
         NavigationView {
             List {
@@ -28,7 +24,7 @@ struct Home: View {
         }
     }
     
-    private let store: Store
+    @EnvironmentObject private var store: Store
     
 }
 
@@ -36,6 +32,7 @@ struct Home_Previews: PreviewProvider {
     
     static var previews: some View {
         Preview(source: Home())
+            .environmentObject(Store())
     }
     
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct Preview<V: View>: View {
     
     enum Device: String, CaseIterable {
-        case iPhoneSE = "iPhone SE"
+        case iPhoneSE = "iPhone SE (3rd generation)"
         case iPhone14 = "iPhone 14"
         case iPhone14Pro = "iPhone 14 Pro"
         case iPhone14ProMax = "iPhone 14 Pro Max"

@@ -66,10 +66,7 @@ extension ProductRow {
             
             Spacer()
             
-            Image(systemName: "heart")
-                .imageScale(.large)
-                .foregroundColor(.peach)
-                .frame(width: 32, height: 32)
+            FavoriteButton(product: self.product)
             
             Image(systemName: "cart")
                 .foregroundColor(.peach)
@@ -83,13 +80,15 @@ extension ProductRow {
 struct ProductRow_Previews: PreviewProvider {
     
     static var previews: some View {
-        Group {
+        let store = Store()
+        return Group {
             ForEach(Store().products) {
                 ProductRow(product: $0)
             }
         }
         .padding()
         .previewLayout(.sizeThatFits)
+        .environmentObject(store)
     }
     
 }

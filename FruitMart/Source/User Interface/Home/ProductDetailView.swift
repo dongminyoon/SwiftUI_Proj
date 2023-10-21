@@ -63,10 +63,7 @@ struct ProductDetailView: View {
 
                 Spacer()
                
-                Image(systemName: "heart")
-                    .imageScale(.large)
-                    .foregroundColor(.peach)
-                    .frame(width: 32, height: 32)
+                FavoriteButton(product: self.product)
             }
             
             Text(self.product.description)
@@ -115,7 +112,9 @@ struct ProductDetailView_Previews: PreviewProvider {
         
         Group {
             Preview(source: previewOne)
+                .environmentObject(store)
             Preview(source: previewTwo, device: [.iPhone14Pro], displayDarkMode: false)
+                .environmentObject(store)
         }
     }
     

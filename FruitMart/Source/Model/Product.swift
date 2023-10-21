@@ -36,17 +36,34 @@ struct Product: Decodable, Identifiable {
     }
     
     init(
+        id: UUID? = nil,
         name: String,
         imageName: String,
         price: Int,
         description: String,
         isFavorite: Bool
     ) {
-        self.id = UUID()
+        if let id = id {
+            self.id = id
+        } else {
+            self.id = UUID()
+        }
         self.name = name
         self.imageName = imageName
         self.price = price
         self.description = description
         self.isFavorite = isFavorite
     }
+    
+    func updatedFavorite(_ isFavorite: Bool) -> Product {
+        return Product(
+            id: self.id,
+            name: self.name,
+            imageName: self.imageName,
+            price: self.price,
+            description: self.description,
+            isFavorite: isFavorite
+        )
+    }
+    
 }
