@@ -22,10 +22,10 @@ struct ProductDetailView: View {
         
         if #available(iOS 14.0, *) {
             return stack
-                .ignoresSafeArea(edges: .top)
+                .ignoresSafeArea(edges: [.top])
         } else {
             return stack
-                .edgesIgnoringSafeArea(.top)
+                .edgesIgnoringSafeArea([.top])
         }
     }
     
@@ -34,6 +34,7 @@ struct ProductDetailView: View {
             Image(self.product.imageName)
                 .resizable()
                 .scaledToFill()
+                .frame(width: geometry.size.width, height: geometry.size.height)
         }
     }
     
@@ -45,17 +46,11 @@ struct ProductDetailView: View {
                 self.priceArea
                 self.buyButton
             }
-            .padding(.bottom, geometry.safeAreaInsets.bottom)
-            .frame(height: geometry.size.height + 10)
             .padding(32)
             .background(Color.white)
             .cornerRadius(16)
-            .shadow(
-                color: .black.opacity(0.2),
-                radius: 10,
-                x: 0,
-                y: -5
-            )
+            .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: -5)
+            .frame(height: geometry.size.height + geometry.safeAreaInsets.bottom)
         }
     }
     
@@ -80,11 +75,14 @@ struct ProductDetailView: View {
     }
     
     private var priceArea: some View {
-        HStack() {
-            Text("₩") + Text("\(self.product.price)").font(.title)
+        let price = self.product.price * self.quantity
+        
+        return HStack() {
+            (Text("₩") + Text("\(price)").font(.title))
                 .fontWeight(.medium)
             Spacer()
-        }
+            QuantitySelector(quantity: self.$quantity)
+        }aw
     }
     
     private var buyButton: some View {
@@ -100,10 +98,10 @@ struct ProductDetailView: View {
                         .font(.system(size: 20, weight: .medium))
                         .foregroundColor(.white)
                 )
-                .padding(.vertical, 8)
         }
     }
     
+    @State private var quantity: Int = 1
     private let product: Product
     
 }

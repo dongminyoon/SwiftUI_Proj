@@ -54,7 +54,7 @@ struct QuantitySelector_Previews: PreviewProvider {
         Group {
             QuantitySelector(quantity: .constant(1))
             QuantitySelector(quantity: .constant(10))
-            QuantitySelector(quantity: .constant(100))aw
+            QuantitySelector(quantity: .constant(100))
         }
         .previewLayout(.sizeThatFits)
     }
