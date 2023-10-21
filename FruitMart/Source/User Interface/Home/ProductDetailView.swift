@@ -18,6 +18,13 @@ struct ProductDetailView: View {
         let stack = VStack(spacing: 0) {
             self.topArea
             self.bottomArea
+        }.alert(isPresented: self.$showingAlert) {
+            Alert(
+                title: Text("주문 확인"),
+                message: Text("\(self.product.name)을(를) \(self.quantity)개 구매하시겠습니까?"),
+                primaryButton: .default(Text("확인")ㅁ),
+                secondaryButton: .cancel(Text("취소"))
+            )
         }
         
         if #available(iOS 14.0, *) {
@@ -28,6 +35,16 @@ struct ProductDetailView: View {
                 .edgesIgnoringSafeArea([.top])
         }
     }
+    
+    @State private var showingAlert: Bool = false
+    @State private var quantity: Int = 1
+    
+    private let product: Product
+    
+}
+
+// MARK: - ProductDetailView UI Component
+extension ProductDetailView {
     
     private var topArea: some View {
         GeometryReader { geometry in
@@ -84,7 +101,7 @@ struct ProductDetailView: View {
     
     private var buyButton: some View {
         Button(action: {
-            print("@구매하기 버튼 누름")
+            self.showingAlert = true
         }) {
             Rectangle()
                 .fill(Color.peach)
@@ -97,9 +114,6 @@ struct ProductDetailView: View {
                 )
         }
     }
-    
-    @State private var quantity: Int = 1
-    private let product: Product
     
 }
 
