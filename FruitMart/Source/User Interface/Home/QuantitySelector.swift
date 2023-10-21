@@ -36,15 +36,35 @@ struct QuantitySelector: View {
     }
     
     private func plusQuantityIfValidate() {
-        guard self.validateRange ~= self.quantity + 1 else { return }
+        guard self.validateRange ~= self.quantity + 1 else {
+            self.occurRigidHapticFeedback()
+            return
+        }
+        self.occurSoftHapticFeedback()
         self.quantity += 1
     }
     
     private func minusQuantityIfValidate() {
-        guard self.validateRange ~= self.quantity - 1 else { return }
+        guard self.validateRange ~= self.quantity - 1 else {
+            self.occurRigidHapticFeedback()
+            return
+        }
+        self.occurSoftHapticFeedback()
         self.quantity -= 1
     }
     
+    private func occurRigidHapticFeedback() {
+        self.rigidFeedback.prepare()
+        self.rigidFeedback.impactOccurred()
+    }
+    
+    private func occurSoftHapticFeedback() {
+        self.softFeedback.prepare()
+        self.softFeedback.impactOccurred(intensity: 0.8)
+    }
+    
+    private let softFeedback = UIImpactFeedbackGenerator(style: .soft)
+    private let rigidFeedback = UIImpactFeedbackGenerator(style: .rigid)
     private let validateRange: ClosedRange<Int> = 1...20
     
 }

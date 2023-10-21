@@ -82,7 +82,7 @@ struct ProductDetailView: View {
                 .fontWeight(.medium)
             Spacer()
             QuantitySelector(quantity: self.$quantity)
-        }aw
+        }
     }
     
     private var buyButton: some View {
