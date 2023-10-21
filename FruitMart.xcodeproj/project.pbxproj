@@ -24,6 +24,7 @@
 		CE2A44C62A7F7C660022B320 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A44C52A7F7C660022B320 /* Store.swift */; };
 		CE2A44CB2A7F86950022B320 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A44CA2A7F86950022B320 /* ProductDetailView.swift */; };
 		CE648E0C2AC6D116008B2360 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE648E0B2AC6D116008B2360 /* Preview.swift */; };
+		CE7D9D7F2ADBE0A80023480D /* QuantitySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D9D7E2ADBE0A80023480D /* QuantitySelector.swift */; };
 		CE8266C32A6CE1DD00EEE095 /* ListPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8266C22A6CE1DD00EEE095 /* ListPractice.swift */; };
 		CEEC9D4E2A5AA1C100BDC266 /* NavigationLinkPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC9D4D2A5AA1C000BDC266 /* NavigationLinkPractice.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		CE2A44C52A7F7C660022B320 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		CE2A44CA2A7F86950022B320 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		CE648E0B2AC6D116008B2360 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		CE7D9D7E2ADBE0A80023480D /* QuantitySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitySelector.swift; sourceTree = "<group>"; };
 		CE8266C22A6CE1DD00EEE095 /* ListPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPractice.swift; sourceTree = "<group>"; };
 		CEEC9D4D2A5AA1C000BDC266 /* NavigationLinkPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkPractice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 			children = (
 				5238EACF240BAC920079E99D /* Home.swift */,
 				CE2A44CA2A7F86950022B320 /* ProductDetailView.swift */,
+				CE7D9D7E2ADBE0A80023480D /* QuantitySelector.swift */,
 				CE2A44C92A7F867F0022B320 /* Component */,
 			);
 			path = Home;
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1694172A595DBC0010CA6D /* ProductRow.swift in Sources */,
+				CE7D9D7F2ADBE0A80023480D /* QuantitySelector.swift in Sources */,
 				CE2A44CB2A7F86950022B320 /* ProductDetailView.swift in Sources */,
 				CE16941A2A595FDF0010CA6D /* Color+Extension.swift in Sources */,
 				CE2A44C22A7F71670022B320 /* GeometryPractice.swift in Sources */,
