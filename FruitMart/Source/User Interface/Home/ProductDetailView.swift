@@ -22,7 +22,7 @@ struct ProductDetailView: View {
             Alert(
                 title: Text("주문 확인"),
                 message: Text("\(self.product.name)을(를) \(self.quantity)개 구매하시겠습니까?"),
-                primaryButton: .default(Text("확인")ㅁ),
+                primaryButton: .default(Text("확인")) { self.orderCurrentProduct() },
                 secondaryButton: .cancel(Text("취소"))
             )
         }
@@ -36,8 +36,14 @@ struct ProductDetailView: View {
         }
     }
     
+    private func orderCurrentProduct() {
+        self.store.addOrder(product: self.product, quantity: self.quantity)
+    }
+    
     @State private var showingAlert: Bool = false
     @State private var quantity: Int = 1
+    
+    @EnvironmentObject private var store: Store
     
     private let product: Product
     
